@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+margin:0;
+padding:0;
+font-family: 'Poppins', sans-serif;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(45deg,rgb(30, 76, 110), rgb(160, 29, 160));
+}
+.searchbox
+{
+    background:white;
+    width:60px;
+    height: 60px;
+   position:relative;
+    display:flex;
+    justify-content:space-between;
+    overflow:hidden;
+    transition:.5s;
+    box-shadow:0 20px 35px rgba(0,0,0,.1);
+}
+
+.searchbox .searchicon
+{
+   position:relative;
+   display:flex;
+   justify-content:center;   
+   align-items:center;
+   cursor:pointer;
+   font-size:1.5em;
+   min-width:60px;
+   height:60px;  
+}
+.searchbox.active{
+  width:360px;
+}
+.searchbox .closeicon
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    width:60px;
+    height:60px;
+    position:relative;
+    font-size:1.5em;
+    scale:0;
+     transition:0.5s;
+    }
+.searchbox.active .closeicon{
+    scale:1;
+    transition-delay:.5s;
+   
+}
+.searchbox .search
+{
+    position:absolute;
+    left:64px;
+ line-height:60px;
+height:100%;
+width:calc(100% - 120px);
+}
+.searchbox .search input{  
+    position:absolute;
+    width:100%;
+    height:100%;
+    border:0;
+    outline:0;
+    font-size:1.2em;
+}
